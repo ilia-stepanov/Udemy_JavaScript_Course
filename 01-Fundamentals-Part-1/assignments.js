@@ -197,3 +197,51 @@ if (numNeighbours === 1) {
 // == supports type conversion, === doesnt
 
 
+
+// LECTURE: Logical Operators
+// 1. Comment out the previous codeso the prompt doesn't get in the way
+// 2. Let's say Sarah is looking for a new country to live in. 
+// She wants to live in a country that speaks english, has less than 50 million people and is not an island.
+// 3. Write an ifstatement to help Sarah figure out if your country is right for her. 
+// You will need to write a condition that accounts for all of Sarah's criteria. 
+// Take your time with this, and check part of the solution if necessary.
+// 4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. 
+// If not, log 'Portugal does not meet your criteria :('
+// 5. Probably your country does not meet all the criteria. Sogo back and temporarily change some variables in order to make the condition true (unless you live in Canada :D)
+
+if (language == 'english' && is_island == false && population < 50) {
+    console.log("You should live in Portugal :)");
+} else {
+   console.log("Portugal does not meet your criteria :("); 
+}
+
+
+
+// LECTURE: The switch Statement
+// 1.Use a switchstatement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all othersimply log 'Great language too :D'
+
+switch (language) {
+    case "chinese":
+    case "mandarin": 
+        console.log('MOST number of native speakers!');
+        break;
+    case "spanish":
+        console.log('2nd place in number of native speakers');
+        break;
+    case "english":
+        console.log('3rd place');
+        break;
+    case "hindi":
+        console.log('Number 4');
+        break;
+    case 'arabic':
+        console.log("5th most spoken language");
+        break;
+    default:
+        console.log('Great language too :D');        
+}
