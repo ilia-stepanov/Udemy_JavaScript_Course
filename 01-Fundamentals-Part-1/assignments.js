@@ -304,13 +304,79 @@ let percentageOfWorld2 = function(population) {
 let worldPopulation = 7900;
 let percentageOfWorld3 = (population, worldPopulation) => population / worldPopulation * 100;
 
+// LECTURE: Functions Calling Other Functions
+// 1. Create a function called 'describePopulation'. Use the function type you like the most. 
+// This function takes in two arguments: 'country' and 'population', and returns a string like this: 
+// 'China has 1441 million people, which is about 18.2% of the world.'
+// 2. To calculate the percentage, 'describePopulation' can call the 'percentageOfWorld1' 
+// function you created earlier.
+// 3. Call 'describePopulation' with data for 3 countries of your choice.
+
+function describePopulation(country, population) {
+    return `${country} has ${population} million people, which is about ${percentageOfWorld1(population)}% of the world.`
+}
+
+
+// LECTURE: Introduction to Arrays
+// 1. Create an array containing 4 population values of 4 countries of your choice. 
+// You may use the values you have been using previously. Store this array into a variable called 'populations'.
+// 2. Log to the console whether the array has 4 elements or not (true or false).
+// 3. Create an array called 'percentages' containing the percentages of the world population for these 4 population values. 
+// Use the 'percentageOfWorld1' function that you created earlier to compute the 4 percentage values.
+
+let populations = [10, 145, 400, 1500];
+console.log(populations.length);
+
+let percentages = [percentageOfWorld1(populations[0]), percentageOfWorld1(populations[1]), percentageOfWorld1(populations[2]), percentageOfWorld1(populations[3])];
+console.log(percentages);
+
+
+// LECTURE: Basic Array Operations (Methods)
+
+// 1. Create an array containing all the neighboring countries of a country of your choice. 
+// Choose a country which has at least 2 or 3 neighbors. Store the array into a variable called 'neighbours'.
+// 2. At some point, a new country called 'Utopia' is created in the neighborhood of your selected country. 
+// So, add it to the end of the 'neighbours' array.
+// 3. Unfortunately, after some time, the new country is dissolved. So, remove it from the end of the array.
+// 4. If the 'neighbours' array does not include the country 'Germany', log to the console: 'Probably not a central European country :D'.
+// 5. Change the name of one of your neighboring countries. To do that, find the index of the country in the 'neighbours' array, 
+// and then use that index to change the array at that index position. 
+// For example, you can search for 'Sweden' in the array, and then replace it with 'Republic of Sweden'.
+
+let neighbours = ['Oman', 'Saudi Arabia', 'Qatar'];
+neighbours.push('Utopia');
+console.log(neighbours);
+
+neighbours.pop();
+console.log(neighbours);
+
+// FINISH
+
+// LECTURE: Introduction to Objects
+// 1. Create an object called 'myCountry' for a country of your choice, 
+// containing properties 'country', 'capital', 'language', 'population', and 'neighbours' 
+// (an array like we used in previous assignments).
+
+
+
+// FINISH
+
+// LECTURE: Dot vs. Bracket Notation
+// 1. Using the object from the previous assignment, log a string like this to the console: 
+// 'Finland has 6 million Finnish-speaking people, 3 neighboring countries, and a capital called Helsinki.'
+// 2. Increase the country's population by two million using dot notation, and then decrease 
+// it by two million using bracket notation.
 
 
 
 
+// FINISH
 
-
-
-
-
-
+// LECTURE: Object Methods
+// 1. Add a method called 'describe' to the 'myCountry' object. 
+// This method will log a string to the console, similar to the string logged in the previous assignment, 
+// but this time using the 'this' keyword.
+// 2. Call the 'describe' method.
+// 3. Add a method called 'checkIsland' to the 'myCountry' object. 
+// This method will set a new property on the object, called 'isIsland'. 
+// 'isIsland' will be true if there are no neighboring countries, and false if there are. Use the ternary operator to set the property.
