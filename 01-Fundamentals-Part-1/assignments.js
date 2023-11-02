@@ -256,3 +256,16 @@ switch (language) {
 // See the different results, and set the population back to original
 
 console.log(`${country}'s population is ${population > 33 ? "above" : "below"} average`);
+
+
+
+
+// Functions - ADD DETAILS!
+
+function describeCountry(country, population, capitalCity) {
+    return `${country} has ${population} million people and its capital city is ${capitalCity}`
+}
+
+countryProfile1 = describeCountry('UAE', 10, 'Abu Dhabi');
+countryProfile2 = describeCountry('Russia', 145, 'Moscow');
+countryProfile3 = describeCountry('Finland', 6, 'Helsinki');
