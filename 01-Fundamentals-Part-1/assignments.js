@@ -350,14 +350,19 @@ console.log(neighbours);
 neighbours.pop();
 console.log(neighbours);
 
-// FINISH
+if (neighbours.includes('Germany') == false) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[1] = 'Kingdom of Saudi Arabia';
+console.log(neighbours);
 
 // LECTURE: Introduction to Objects
 // 1. Create an object called 'myCountry' for a country of your choice, 
 // containing properties 'country', 'capital', 'language', 'population', and 'neighbours' 
 // (an array like we used in previous assignments).
 
-
+let myCountry = {country: 'UAE', capital: 'Abu Dhabi', language: 'Arabic', neighbours: ['Oman', 'Saudi Arabia', 'Qatar']}
 
 // FINISH
 
