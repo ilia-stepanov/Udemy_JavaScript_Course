@@ -362,9 +362,7 @@ console.log(neighbours);
 // containing properties 'country', 'capital', 'language', 'population', and 'neighbours' 
 // (an array like we used in previous assignments).
 
-let myCountry = {country: 'UAE', capital: 'Abu Dhabi', language: 'Arabic', neighbours: ['Oman', 'Saudi Arabia', 'Qatar']}
-
-// FINISH
+let myCountry = {country: 'UAE', capital: 'Abu Dhabi', language: 'Arabic', population: 10, neighbours: ['Oman', 'Saudi Arabia', 'Qatar']}
 
 // LECTURE: Dot vs. Bracket Notation
 // 1. Using the object from the previous assignment, log a string like this to the console: 
@@ -372,6 +370,17 @@ let myCountry = {country: 'UAE', capital: 'Abu Dhabi', language: 'Arabic', neigh
 // 2. Increase the country's population by two million using dot notation, and then decrease 
 // it by two million using bracket notation.
 
+function describePopulation(myCountry) {
+    return `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} 
+    neighboring countries, and a capital called ${myCountry.capital}.`;
+}
+
+console.log(describePopulation(myCountry));
+
+myCountry.population = myCountry.population + 2;
+console.log(describePopulation(myCountry));
+myCountry['population'] = myCountry['population'] - 2;
+console.log(describePopulation(myCountry));
 
 
 
