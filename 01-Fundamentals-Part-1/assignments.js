@@ -383,9 +383,6 @@ myCountry['population'] = myCountry['population'] - 2;
 console.log(describePopulation(myCountry));
 
 
-
-// FINISH
-
 // LECTURE: Object Methods
 // 1. Add a method called 'describe' to the 'myCountry' object. 
 // This method will log a string to the console, similar to the string logged in the previous assignment, 
@@ -394,3 +391,22 @@ console.log(describePopulation(myCountry));
 // 3. Add a method called 'checkIsland' to the 'myCountry' object. 
 // This method will set a new property on the object, called 'isIsland'. 
 // 'isIsland' will be true if there are no neighboring countries, and false if there are. Use the ternary operator to set the property.
+
+let myCountry = {
+    country: 'UAE', 
+    capital: 'Abu Dhabi', 
+    language: 'Arabic', 
+    population: 10, 
+    neighbours: ['Oman', 'Saudi Arabia', 'Qatar'],
+    describe: function () {
+        return `${this.country} has ${this.population} million ${this.language}-speaking people, 
+        ${this.neighbours.length} neighboring countries, and a capital called ${this.capital}.`;
+    },
+
+    checkIsland: function () {
+        this.isIsland = neighbours.length > 0
+        return this.isIsland
+    }
+}
+
+
