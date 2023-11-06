@@ -1,18 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(239, 239, 193);
   font-family: Arial;
   font-size: 20px;
+  padding: 50px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
+  color: green;
+  /* margin-bottom: 25px; */
+  text-align: center;
+}
+
+h3 {
+  font-size: 35px;
+  color: blue;
+  /* margin-bottom: 25px; */
+  margin-top: 25px;
+  text-align: center;
 }
 
 .first {
-  color: red;
+  color: rgb(8, 88, 92);
+  text-align: center;
+}
+
+.second {
+  color: rgb(91, 8, 92);
+  text-align: center;
+}
+
+p {
+  margin-bottom: 15px;
+}
+.third {
+  color: rgb(34, 94, 12);
+  text-align: center;
 }
 
 #your-name {
   background-color: rgb(110, 110, 7);
   border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 25px;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+a {
+  background-color: black;
+}
+
+#your-name p {
+  background-color: yellow;
+}
+#your-name p {
+  background-color: green;
+}
+
+#python-photo {
+  width: 100px;
 }
