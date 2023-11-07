@@ -26,3 +26,11 @@ Started HTML and CSS. Learned about head, body, h, a, div, class keywords.
 Change the html content.
 Elaborated on CSS options.
 Added basic DOM operations.
+
+## Date
+
+2023-11-07
+
+## What's going on
+
+Addded document operation (DOM) with control flow
