@@ -34,3 +34,11 @@ Added basic DOM operations.
 ## What's going on
 
 Addded document operation (DOM) with control flow
+
+## Date
+
+2023-11-08
+
+## What's going on
+
+Added the condition that if the guessed number is correct backgroung color becomes green
