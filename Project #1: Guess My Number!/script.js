@@ -27,11 +27,11 @@ document.querySelector(".check").addEventListener("click", function () {
   console.log(guess, typeof guess);
 
   if (!guess) {
-    document.querySelector(".message").textContent = "No number";
+    setMessage("No number");
   } else if (score > 0) {
     if (guess === secretNumber) {
       document.querySelector(".number").textContent = secretNumber;
-      document.querySelector(".message").textContent = "Correct Number!";
+      setMessage("Correct Number!");
       document.querySelector("body").style.backgroundColor = "#60b347";
       document.querySelector(".number").style.width = "30rem";
 
@@ -39,24 +39,21 @@ document.querySelector(".check").addEventListener("click", function () {
         document.querySelector(".highscore").textContent = score;
         highscore = score;
       }
-    } else if (guess > secretNumber) {
-      document.querySelector(".message").textContent = "Too High!";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else if (guess < secretNumber) {
-      document.querySelector(".message").textContent = "Too Low!";
-      score--;
-      document.querySelector(".score").textContent = score;
+    } else if (guess !== secretNumber) {
+      score = changeOutputIfWrong(
+        guess > secretNumber ? "Too High!" : "Too Low!",
+        score
+      );
     }
   }
   if (score < 1) {
-    document.querySelector(".message").textContent = "You lost the game!";
+    setMessage("You lost the game!");
     document.querySelector("body").style.backgroundColor = "#e31616";
   }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
-  document.querySelector(".message").textContent = "Start guessing...";
+  setMessage("Start guessing...");
   score = 10;
   document.querySelector(".score").textContent = score;
   document.querySelector(".guess").value = "";
@@ -65,3 +62,14 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".number").textContent = "?";
   secretNumber = Math.trunc(Math.random() * 20) + 1;
 });
+
+function changeOutputIfWrong(message, score) {
+  setMessage(message);
+  score--;
+  document.querySelector(".score").textContent = score;
+  return score;
+}
+
+function setMessage(message) {
+  document.querySelector(".message").textContent = message;
+}
