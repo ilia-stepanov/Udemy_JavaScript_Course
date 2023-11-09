@@ -42,3 +42,11 @@ Addded document operation (DOM) with control flow
 ## What's going on
 
 Added the condition that if the guessed number is correct backgroung color becomes green
+
+## Date
+
+2023-11-09
+
+## What's going on
+
+Added AGAIN option
