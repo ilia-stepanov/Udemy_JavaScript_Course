@@ -50,3 +50,13 @@ Added the condition that if the guessed number is correct backgroung color becom
 ## What's going on
 
 Added AGAIN option
+
+## Date
+
+2023-11-10
+
+## What's going on
+
+Refactored all functions in Guess My Number project.
+Started a new project.
+Renamed folders.
