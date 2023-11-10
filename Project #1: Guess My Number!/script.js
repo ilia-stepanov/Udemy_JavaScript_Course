@@ -24,7 +24,6 @@ let highscore = 0;
 
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
-  console.log(guess, typeof guess);
 
   if (!guess) {
     setMessage("No number");
@@ -54,8 +53,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
 document.querySelector(".again").addEventListener("click", function () {
   setMessage("Start guessing...");
-  score = 10;
-  document.querySelector(".score").textContent = score;
+  setScore(10);
   document.querySelector(".guess").value = "";
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").style.width = "15rem";
@@ -65,11 +63,14 @@ document.querySelector(".again").addEventListener("click", function () {
 
 function changeOutputIfWrong(message, score) {
   setMessage(message);
-  score--;
-  document.querySelector(".score").textContent = score;
+  setScore(--score);
   return score;
 }
 
 function setMessage(message) {
   document.querySelector(".message").textContent = message;
+}
+
+function setScore(score) {
+  document.querySelector(".score").textContent = score;
 }
