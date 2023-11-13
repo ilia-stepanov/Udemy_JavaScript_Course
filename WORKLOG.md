@@ -60,3 +60,12 @@ Added AGAIN option
 Refactored all functions in Guess My Number project.
 Started a new project.
 Renamed folders.
+
+## Date
+
+2023-11-12
+
+## What's going on
+
+Finished Modal project.
+Started Pig Game project
